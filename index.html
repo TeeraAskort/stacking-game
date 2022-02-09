@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <style>
+        canvas {
+            border: 2px solid grey;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-5">
+                <h2 id="puntuation">Puntuation: 0</h2>
+            </div>
+            <div class="col-3">
+                <button id="reset" class="btn btn-primary">Reset</button>
+            </div>
+            <div class="col-12">
+                <canvas id="canvas" width="600" height="600"></canvas>
+            </div>
+            <div class="col-12">
+                <hr>
+                <h1>Stacking game!</h1>
+                <h2>Info:</h2>
+                <ul>
+                    <li>
+                        Haz click en el cuadrado para parar la pieza en movimiento.
+                    </li>
+                    <li>
+                        Si la pieza en movimiento cae fuera de la anterior pierdes.
+                    </li>
+                    <li>
+                        El botón de reset reinicia el juego.
+                    </li>
+                    <li>
+                        La Puntuación y el Game Over se muestran arriba a la izquierda del botón de reset, se actualizan
+                        al hacer click.
+                    </li>
+                    <li>
+                        No habrán más de 5 piezas al mismo tiempo en pantalla.
+                    </li>
+                    <li>
+                        Cuando parte de la pieza en movimiento cae fuera de la anterior, el ancho se verá reducido al
+                        tamaño que ha quedado dentro de la anterior.
+                    </li>
+                    <li>
+                        Las piezas son un objeto literal compuesto por la posición en X e Y, y el ancho y alto.
+                    </li>
+                    <li>
+                        Al perder o reiniciar la partida se llama a window.cancelAnimationFrame para parar la animación
+                        y reiniciarla luego si estás reiniciando el juego.
+                    </li>
+                    <li>
+                        Si la pieza en movimiento cae al borde y se convierte en menos de 10 pixeles de tamanyo pierdes
+                        el juego.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
